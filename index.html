@@ -43,7 +43,7 @@
 <p>[Resulting Image demo Faster R-CNN]   </p>
 
 <h3>
-<a id="2-transfer-learning-to-train-a-pre-existing-deep-cnn-for-self-crafted-hand-raising-images-robonetpy" class="anchor" href="#2-transfer-learning-to-train-a-pre-existing-deep-cnn-for-self-crafted-hand-raising-images-robonetpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>(2) Transfer Learning to train a Pre-existing Deep CNN for self-crafted hand-raising images (<a href="https://github.com/edwardelson/RoboTutor/blob/master/haar_handraise_detection.py">robonet.py</a>)</h3>
+<a id="2-transfer-learning-to-train-a-pre-existing-deep-cnn-for-self-crafted-hand-raising-images-robonetpy" class="anchor" href="#2-transfer-learning-to-train-a-pre-existing-deep-cnn-for-self-crafted-hand-raising-images-robonetpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>(2) Transfer Learning to train a Pre-existing Deep CNN for self-crafted hand-raising images (<a href="https://github.com/edwardelson/RoboTutor/blob/master/robonet.py">robonet.py</a>)</h3>
 
 <p>The next step is to train Faster R-CNN for a new dataset of handraising gestures that it has not seen before. Faster R-CNN consists of several stages: Region Proposal Network, Convolutional Layers and Classification Network. In this step, we focused more on the Convolutional Layers and Classification Network. We figured out that these layers were actually a result of transfer learning from another existing deep networks. So we went to <a href="https://github.com/BVLC/caffe/wiki/Model-Zoo">Caffe Model Zoo</a>, and browse for some existing pretrained networks. As a preliminary test, we chose the <a href="http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html">Flickr model</a> as there's an existing tutorial from Caffe on how to dissect and retrain it.  </p>
 
@@ -54,7 +54,7 @@
 <p>[training result in Ubuntu]  </p>
 
 <h3>
-<a id="3-haar-feature-approach-for-face--hand-detection-haar_handraise_detectionpy" class="anchor" href="#3-haar-feature-approach-for-face--hand-detection-haar_handraise_detectionpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>(3) Haar Feature Approach for Face + Hand Detection (<a href="https://github.com/edwardelson/RoboTutor/blob/master/robonet.py">haar_handraise_detection.py</a>)</h3>
+<a id="3-haar-feature-approach-for-face--hand-detection-haar_handraise_detectionpy" class="anchor" href="#3-haar-feature-approach-for-face--hand-detection-haar_handraise_detectionpy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>(3) Haar Feature Approach for Face + Hand Detection (<a href="https://github.com/edwardelson/RoboTutor/blob/master/haar_handraise_detection.py">haar_handraise_detection.py</a>)</h3>
 
 <p>We were inspired by a paper which tries to tackle this problem by detecting face and hand separately. We borrowed this idea and decide to find the Euclidean distance between detected faces and hands to decide whether a hand-raising gesture exists. We experimented with Haar Feature with Skin Detection. The result can be seen below.</p>
 
