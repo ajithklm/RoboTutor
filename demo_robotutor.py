@@ -5,13 +5,10 @@
 # Copyright (c) 2015 Microsoft
 # Licensed under The MIT License [see LICENSE for details]
 # Written by Ross Girshick
+#
+# modified by Edward Elson for RoboTutor
+# implementing Faster R-CNN in video
 # --------------------------------------------------------
-
-"""
-Demo script showing detections in sample images.
-
-See README.md for installation instructions before running.
-"""
 
 import _init_paths
 from fast_rcnn.config import cfg
