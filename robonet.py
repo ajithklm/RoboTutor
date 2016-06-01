@@ -1,5 +1,6 @@
 # Create a new Network to train and test hand-raising database
 # April 6th, 2015
+# by Edward Elson
 # one package: robonet.py | robonet_label.txt | robonet_deploy.prototxt
 
 import numpy as np
