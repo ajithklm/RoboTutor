@@ -1,7 +1,7 @@
 #INTRODUCTION
 These are the works that I did during my research internship project in the [RoboTutor](https://robotutor.weblog.tudelft.nl/) team of [TU Delft Robotics Institute](http://robotics.tudelft.nl/). RoboTutor is a project that aims to use a Nao Robot to teach Robotics to students of schools in the Netherlands. Below is an image of RoboTutor in action, taken last year.  
   
-![RoboTutor in Action](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/robotutor.jpg)  
+![RoboTutor in Action](https://dl.dropboxusercontent.com/s/r1r5uqcewqvuvn4/robotutor.jpg?dl=0)  
   
 The main goal of my project is to detect hand-raising gestures in a video, and feed the coordinates of such gesture to the Nao Robot central processor. In the process, I tried out different methods as listed below:     
    
@@ -15,20 +15,20 @@ Another problem is that there's no existing dataset on hand-raising gesture imag
   
 The result is of course very fast convergence, with 100% training data accuracy. This is absolutely an overfit, and when tested with a new image it has never seen, it performs almost no better than chance. We are left with the option of enlarging the dataset (which takes a lot of time) or try out another method. 
 
-![Resulting Image demo Faster R-CNN](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/robonet.jpeg)   
+![Resulting Image demo Faster R-CNN](https://dl.dropboxusercontent.com/s/pyflmxn6fwk7d4a/robonet.jpeg?dl=0)   
   
 Left image is a sample dataset, Right image is the python code that I ran.    
   
 ### (3) Haar Feature Approach for Face + Hand Detection ([haar_handraise_detection.py](https://github.com/edwardelson/RoboTutor/blob/master/haar_handraise_detection.py))
 I was inspired by a paper which tries to tackle this problem by detecting face and hand separately. I borrowed this idea and decide to find the Euclidean distance between detected faces and hands to decide whether a hand-raising gesture exists. I experimented with Haar Feature with Skin Detection (preliminary elimination of non-skin objects). The result can be seen below.   
    
-![Normal Raw Image](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/raw_norm.jpeg)  
+![Normal Raw Image](https://dl.dropboxusercontent.com/s/o9vsf88k3ildt3e/raw_norm.jpeg?dl=0)  
   
-![Normal with Skin Detected Image](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/mask_norm.jpeg)  
+![Normal with Skin Detected Image](https://dl.dropboxusercontent.com/s/mqrlkfmh23mc9ac/mask_norm.jpeg?dl=0)  
     
-![Hand-raising Gesture Detected in Raw Image](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/raw.jpeg)  
+![Hand-raising Gesture Detected in Raw Image](https://dl.dropboxusercontent.com/s/0qx0um6bow9dsnj/raw.jpeg?dl=0)  
   
-![Hand-raising Gesture Detected in Skin Detected Image](https://googledrive.com/host/0B3qXE5D5r-qCYzhBUF81cFN6Wlk/mask.jpeg)     
+![Hand-raising Gesture Detected in Skin Detected Image](https://dl.dropboxusercontent.com/s/gul0rm636znasky/mask.jpeg?dl=0)     
     
 A similar result can also be seen in the following [video](https://www.youtube.com/watch?v=Lps8rkGjzvY&feature=youtu.be) that I've made.   
   
