@@ -1,0 +1,8 @@
+title: Automatic Hand Raising Gesture Detection
+description: Research Internship at TU Delft Robotics Institute 2016
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-dinky
+
+gems:
+  - jekyll-mentions
